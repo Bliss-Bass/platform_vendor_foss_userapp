@@ -90,9 +90,8 @@ USER_APPS=/system/etc/user_app/*
 BUILD_DATETIME=$(getprop ro.build.date.utc)
 POST_INST_NUM=$(cat $POST_INST)
 
-set_custom_package_perms
-
 if [ ! "$BUILD_DATETIME" == "$POST_INST_NUM" ]; then
+	set_custom_package_perms
 	# FOSS apps
 	install_apk termux.apk
 	install_apk neostore.apk
