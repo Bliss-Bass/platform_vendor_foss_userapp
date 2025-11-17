@@ -8,12 +8,6 @@ PRODUCT_COPY_FILES += \
 
 endif
 
-ifneq ($(BLISS_REMOVE_KSU),true)
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/kernelsu.apk:$(TARGET_COPY_OUT_VENDOR)/etc/preinstall/kernelsu.apk_all \
-
-endif
-
 ifeq ($(BLISS_BUILD_VARIANT),foss)
 
 ifeq ($(USE_AURORA_STORE),foss)
