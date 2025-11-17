@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-first_run=$(getprop persist.glodroid.first_run)
+first_run=$(getprop persist.bliss.first_run)
 
 ARCH=$(getprop ro.bionic.arch)
 APK_PATH=/vendor/etc/preinstall
@@ -93,18 +93,8 @@ POST_INST_NUM=$(cat $POST_INST)
 set_custom_package_perms
 
 if [ ! "$BUILD_DATETIME" == "$POST_INST_NUM" ]; then
-	# GD apps
-	install_apk fenix.apk
-	install_apk fdroid.apk
-	# Bliss apps
-	install_apk kernelsu.apk
-	install_apk smartdock.apk
+	# FOSS apps
 	install_apk termux.apk
-	install_apk xtmapper.apk
-	install_apk setorientation.apk
-	# custopmer apps
-	install_apk print.apk
-	install_apk mjpdfreader.apk
 	install_apk neostore.apk
 	install_apk aurorastore.apk
 	install_apk droidify.apk
