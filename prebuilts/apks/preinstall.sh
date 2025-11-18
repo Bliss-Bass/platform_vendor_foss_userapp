@@ -1,6 +1,6 @@
 #!/system/bin/sh
 
-first_run=$(getprop persist.bliss.first_run)
+first_run=$(getprop persist.foss_userapp.first_run)
 
 ARCH=$(getprop ro.bionic.arch)
 APK_PATH=/vendor/etc/preinstall
