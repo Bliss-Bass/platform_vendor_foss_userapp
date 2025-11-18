@@ -10,7 +10,7 @@ endif
 
 ifeq ($(BLISS_BUILD_VARIANT),foss)
 
-ifeq ($(USE_AURORA_STORE),foss)
+ifeq ($(USE_AURORA_STORE),true)
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/aurorastore.apk:$(TARGET_COPY_OUT_VENDOR)/etc/preinstall/aurorastore.apk_all
 
